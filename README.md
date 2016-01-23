@@ -1,2 +1,2 @@
-# resume
-minh's resume
+# Duc Minh House 
+Welcome to my house!
