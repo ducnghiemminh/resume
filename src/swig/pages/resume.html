@@ -1,0 +1,97 @@
+{% import '../macros/skill.html' as skill %}
+{% include '../vars/resume.html' %}
+
+<section class="resume-screen">
+  <div class="container">
+    <div class="split-bar">
+      <span class="danger"></span>
+      <span class="primary"></span>
+      <span class="info"></span>
+      <span class="success"></span>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box">
+          <h1 class="author">DUC MINH</h1>
+          <h4 class="job-title">
+            Senior Web Developer
+          </h4>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box">
+          <ul class="fa-ul list-contact">
+            <li><i class="fa-li fa fa-lg fa-map-marker"></i>Hanoi, Vietnam</li>
+            <li><i class="fa-li fa fa-lg fa-mobile"></i>(+84) 1694090990</li>
+            <li><i class="fa-li fa fa-envelope-o"></i>ducitbk@gmail.com</li>
+            <li><i class="fa-li fa fa-skype"></i>ducnm.freelancer</li>
+          </ul>
+          <div class="clearfix"></div>
+          <div class="msg">
+            <p>
+              I am a web developer based in Hanoi.
+              If you feel interested in my little CV, please get in touch with me via email.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="box box-primary">
+          <h4 class="title">Work Experience</h4>
+          {{skill.history(resume.history)}}
+        </div>
+        <div class="box box-danger">
+          <h4 class="title">Featured Projects</h4>
+          <ul class="column">
+            {{skill.project(resume.projects)}}
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="box box-success">
+          <h4 class="title">Work Methodology</h4>
+          {{skill.method(resume.methodology)}}
+          <div class="clearfix"></div>
+        </div>
+        <div class="box box-flowed">
+          <h4 class="title">Soft Skills</h4>
+          {{skill.method(resume.soft)}}
+          <div class="clearfix"></div>
+        </div>
+        <div class="box box-flowed">
+          <h4 class="title">Computer Skills</h4>
+          {{skill.method(resume.computer)}}
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <div class="box box-info">
+      <h4 class="title">Technologies</h4>
+      {{skill.technology(resume.frontend)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.js)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.php)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.db)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.server)}}
+      <div class="divider divider-line"></div>
+      {{skill.technology(resume.tool)}}
+    </div>
+    <div class="box">
+      <h4 class="title">Others</h4>
+      {{skill.other(resume.others)}}
+    </div>
+    <div class="box footer">
+      {% include '../layouts/components/copyright.html' %}
+    </div>
+
+  </div>
+</section>
